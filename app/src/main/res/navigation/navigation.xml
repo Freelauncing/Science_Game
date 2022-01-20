@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/gameHomeFragment"
+        android:name="com.sciencegame.game.GameHomeFragment"
+        android:label="@string/android_trivia"
+        tools:layout="@layout/fragment_game_home">
+        <action
+            android:id="@+id/action_titleFragment_to_gameFragment"
+            app:destination="@id/gameFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.sciencegame.game.GameFragment"
+        tools:layout="@layout/fragment_game">
+        <action
+            android:id="@+id/action_gameFragment_to_gameOverFragment"
+            app:destination="@id/gameOverFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:popUpTo="@id/gameFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_gameFragment_to_gameWonFragment"
+            app:destination="@id/gameWonFragment"
+            app:popUpTo="@id/gameFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameOverFragment"
+        android:name="com.sciencegame.game.GameOverFragment"
+        android:label="@string/game_over"
+        tools:layout="@layout/fragment_game_over">
+        <action
+            android:id="@+id/action_gameOverFragment_to_gameFragment"
+            app:destination="@id/gameFragment"
+            app:popUpTo="@id/gameHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameWonFragment"
+        android:name="com.sciencegame.game.GameWonFragment"
+        android:label="@string/congratulations"
+        tools:layout="@layout/fragment_game_won">
+        <action
+            android:id="@+id/action_gameWonFragment_to_gameFragment"
+            app:destination="@id/gameFragment"
+            app:popUpTo="@id/gameHomeFragment" />
+        <argument
+            android:name="numQuestions"
+            app:argType="integer" />
+        <argument
+            android:name="numCorrect"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.sciencegame.about.AboutFragment"
+        android:label="@string/about"
+        tools:layout="@layout/fragment_about"/>
+    <fragment
+        android:id="@+id/rulesFragment"
+        android:name="com.sciencegame.rules.RulesFragment"
+        android:label="Rules"
+        tools:layout="@layout/fragment_rules" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.sciencegame.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_learningFragment"
+            app:destination="@id/learningFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_gameHomeFragment"
+            app:destination="@id/gameHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/learningFragment"
+        android:name="com.sciencegame.learning.LearningFragment"
+        android:label="Learning"
+        tools:layout="@layout/fragment_learning" />
+</navigation>

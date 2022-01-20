@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Science Game</string>
+    <string name="game_over">Game Over</string>
+    <string name="try_again">Try Again?</string>
+    <string name="position">Position</string>
+    <string name="select_an_avatar">Select an Avatar</string>
+    <string name="android_trivia">Science Game</string>
+    <string name="about_text">Science Game will help remind you of important concepts you have learned and will learn in LifeCycle of start.\n\nThese questions will help sharpen your skills and revise \n\nJust learn and have fun while playing!</string>
+    <string name="rules_text">Select the answer from the options given. Each time you get an answer correct, you advance to the next question and you will get +1 point.\n\nIf you get the answer wrong, -1 point will be deducted!. At last the result will be shown to you\n\n Happy Playing game.</string>
+    <string name="rules">Rules</string>
+    <string name="about">About</string>
+    <string name="trivia_hint">Science Game Hint</string>
+    <string name="title_android_trivia_question">Question (%1$d/%2$d)</string>
+    <string name="title_about_trivia">About Science Game</string>
+    <string name="title_trivia_rules">Science Game Rules</string>
+    <string name="share_success_text">I have scored %1$d/%2$d correct questions in Science Game App! You have to try this amazing app</string>
+    <string name="submit_button">Submit</string>
+    <string name="congratulations">Congratulations!</string>
+    <string name="share">Share</string>
+    <string name="sharing_not_available">Sharing Not Available</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
